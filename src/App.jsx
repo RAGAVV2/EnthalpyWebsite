@@ -21,8 +21,8 @@ function App() {
     <Router>
     <Navbar />
     <Routes>
-        <Route path='/' element={<HomeContent  />} />
-        <Route path='/Team' element={<TeamContent />} />
+        <Route path='/EnthalpyWebsite' element={<HomeContent  />} />
+        <Route path='/EnthalpyWebsite/Team' element={<TeamContent />} />
     </Routes>
    </Router>
    </div>
