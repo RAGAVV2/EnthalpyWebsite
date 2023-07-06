@@ -1,7 +1,9 @@
 import React from 'react';
-import './navbar.css'; 
-import backwardIcon from './Vector 522.png'; // Replace with the actual path to your backward icon image
-import forwardIcon from './Vector 521.png'; // Replace with the actual path to your forward icon image
+import './navbar.css';
+import { NavLink as Link } from "react-router-dom"; 
+import backwardIcon from './Vector 522.png'; 
+import forwardIcon from './Vector 521.png'; 
+import Toggle from "../toggle/Toggle";
 
 const Navbar = () => {
 
@@ -10,13 +12,44 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar__left">
         <span className="navbar__logo">ENTHALPY</span>
-        
+        <Toggle />
       </div>
       <div className="navbar__right">
-        <span className="navbar__slogo">Team</span>
-        <span className="navbar__slogo">Mission</span>
-        <span className="navbar__slogo">Contact</span>
-      </div>
+      <div className="n-list">
+          <ul style={{ listStyleType: "none" }}>
+            <li>
+              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/Misson" spy={true} smooth={true}>
+                Mission
+              </Link>
+            </li>
+            <li>
+              <Link to="/Projects" spy={true} smooth={true}>
+             Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/Team" spy={true} smooth={true}>
+                Team
+              </Link>
+            </li>
+            <li>
+              <Link to="/Sponsor" spy={true} smooth={true}>
+                Support us
+              </Link>
+            </li>
+            <li>
+              <Link to="/Contact" spy={true} smooth={true}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+    </div>
     </div>
 
     <div className="nav_button">
@@ -36,12 +69,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-//Note:
-//while importing: add 
-//const currentPage = n; 
-// Replace 'n' with the logic to determine the current page number
-
-//<Navbar currentPage={currentPage} />
-
-//add neccessary page links appropriately to the className="nav_backwardButton" and span className="nav_forwardButton" to navigate through the pages.
-// and Replace the currentpage value in each page.  const currentPage = n;    <Navbar currentPage={currentPage} />

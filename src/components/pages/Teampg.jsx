@@ -1,15 +1,13 @@
 import React from 'react';
 
-const HomeContent = () => {
-  const currentPage = 1; 
-
+const TeamContent = () => {
   return (
     <div>
-        <h1>Team Enthalpy</h1>
+        <h1>MEET OUR TEAM</h1>
         <p>
       <br/>
 <br/><br/><br/><br/><br/>
-        
+        <h2></h2>
 <br/><br/>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, tortor sit amet congue commodo, elit mi pellentesque urna, nec bibendum tortor massa nec enim. Nunc dapibus pellentesque sapien, in tristique nulla feugiat a. Mauris ultricies, nisi id rhoncus consequat, tortor leo pellentesque sem, a consequat justo mauris non ligula. Phasellus quis semper mi, id fringilla purus. Sed eu aliquet nunc, eu bibendum nunc. Nam mollis est at magna euismod, eu tristique ligula consequat. Nullam bibendum semper arcu, in pellentesque eros volutpat eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin tristique nisi ac velit ullamcorper feugiat. Fusce fermentum tristique leo, sit amet consectetur mi efficitur vitae. Curabitur pulvinar interdum libero, ut efficitur purus ultricies et. Nulla ac pulvinar ligula. Integer semper sagittis elementum.
 
@@ -29,4 +27,4 @@ Phasellus ut metus nibh. Sed accumsan sapien a nisi condimentum lacinia. Nunc qu
   );
 };
 
-export default HomeContent;
+export default TeamContent;
