@@ -1,4 +1,4 @@
-import './Style.css'
+import './style.css'
 import React, { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { gsap } from 'gsap';
