@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { gsap } from 'gsap';
 
-const TeamContent = () => {
+const ProjectContent = () => {
   const containerRef = useRef(null);
   const [ref1, inView1] = useInView({
     triggerOnce: true,
@@ -30,51 +30,9 @@ const TeamContent = () => {
 
   return (
     <div className="container">
-      <h1>Meet OurTeam</h1>
-      <div className="images-container" ref={containerRef}>
-        <div ref={ref1} className="image-wrapper">
-          <img
-            className="image1"
-            src="../src/assets/Aerodynamics_Structure_ Shramon Banerjee_21BME1085.jpeg"
-            alt="Image 1"
-            style={{ opacity: 0, transform: 'translateX(-50px)' }}
-          />
-        </div>
-        <div ref={ref2} className="image-wrapper">
-          <img
-            className="image2"
-            src="../src/assets/Aerodynamics_Structure_ Shramon Banerjee_21BME1085.jpeg"
-            alt="Image 2"
-            style={{ opacity: 0, transform: 'translateX(50px)' }}
-          />
-        </div>
-        {showMoreImages && (
-          <>
-            <div className="image-wrapper">
-              <img
-                className="image3"
-                src="../src/assets/Aerodynamics_Structure_ Shramon Banerjee_21BME1085.jpeg"
-                alt="Image 3"
-                style={{ opacity: 0, transform: 'translateX(-50px)' }}
-              />
-            </div>
-            <div className="image-wrapper">
-              <img
-                className="image4"
-                src="../src/assets/Aerodynamics_Structure_ Shramon Banerjee_21BME1085.jpeg"
-                alt="Image 4"
-                style={{ opacity: 0, transform: 'translateX(50px)' }}
-              />
-            </div>
-          </>
-        )}
+      <h1>Projects</h1>
       
-      {!showMoreImages && (
-        <button className="show-more-button" onClick={handleShowMoreImages}>
-          Show More Images
-        </button>
-      )}
-      </div>
+      
       <div> <p>
       <br/>
 <br/><br/><br/><br/><br/>
@@ -98,4 +56,4 @@ Phasellus ut metus nibh. Sed accumsan sapien a nisi condimentum lacinia. Nunc qu
   );
 };
 
-export default TeamContent;
+export default ProjectContent;

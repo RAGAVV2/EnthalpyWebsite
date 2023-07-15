@@ -1,12 +1,42 @@
-import React from 'react';
+import './Style.css'
+import React, { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { gsap } from 'gsap';
 
 const HomeContent = () => {
-  const currentPage = 1; 
+  const containerRef = useRef(null);
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [showMoreImages, setShowMoreImages] = useState(false);
+
+  useEffect(() => {
+    if (inView1) {
+      gsap.to('.image1', { opacity: 1, x: 0, duration: 1 });
+    }
+    if (inView2) {
+      gsap.to('.image2', { opacity: 1, x: 0, duration: 1 });
+    }
+  }, [inView1, inView2]);
+
+  const handleShowMoreImages = () => {
+    setShowMoreImages(true);
+  };
 
   return (
-    <div>
-        <h1>Team Enthalpy</h1>
-        <p>
+    
+    <div className="container"style={{
+    height: '100vh'
+    }}>
+      <h1>Team Enthalpy</h1>
+      
+      <h2>Mission</h2>
+      <div> <p>
       <br/>
 <br/><br/><br/><br/><br/>
         
@@ -16,15 +46,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, tortor s
 Suspendisse aliquam, elit eu sollicitudin dignissim, erat dui venenatis ex, vitae commodo lacus nisi non ex. Vivamus et est malesuada, suscipit tortor id, vestibulum odio. Sed tincidunt nunc nec odio eleifend, sed pulvinar nunc fringilla. Donec in sagittis libero. Maecenas tristique dui id orci hendrerit, nec ullamcorper urna dignissim. Curabitur ut risus feugiat, fringilla metus eu, suscipit enim. Mauris sed felis bibendum, feugiat massa ut, mollis sapien. Integer faucibus odio id sem scelerisque facilisis. In lacinia orci sed aliquet hendrerit.
 
 <br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
 
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut pulvinar leo in dictum consectetur. Quisque cursus, lacus nec euismod tempus, justo orci vulputate urna, sed consequat neque nunc at ex. Etiam eu luctus lectus, a feugiat dolor. Maecenas id nisi tellus. Cras ullamcorper metus non eros dictum, sed malesuada ante efficitur. Duis posuere efficitur dui. Aliquam sit amet eleifend tortor. Donec tristique ante nec commodo lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed pellentesque, lorem at posuere feugiat, dui nisi tincidunt dui, non eleifend eros erat ut sapien.
 
 Phasellus ut metus nibh. Sed accumsan sapien a nisi condimentum lacinia. Nunc quis convallis dolor. In hac habitasse platea dictumst. Vestibulum malesuada ipsum sed ligula semper facilisis. Sed malesuada enim ipsum, id lobortis erat tincidunt id. Aliquam erat volutpat. Sed malesuada varius lobortis. Sed congue, dui sit amet sagittis tempor, felis elit sagittis nisl, et facilisis velit nulla in metus. Vivamus fermentum consequat ante, nec
 
  bibendum lectus vestibulum nec. Aenean maximus justo ut ligula rutrum dapibus. Vestibulum mattis sollicitudin odio, in malesuada metus aliquet at. Nullam dapibus, mauris et ultrices tincidunt, felis felis condimentum elit, id dignissim erat nisi at felis. In hac habitasse platea dictumst. Fusce semper, lorem ut aliquet tincidunt, ligula sapien interdum elit, eu bibendum ligula erat vitae lacus.
-
 </p>
+    </div>
     </div>
   );
 };

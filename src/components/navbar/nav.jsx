@@ -18,32 +18,27 @@ const Navbar = () => {
       <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
             <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
+              <Link activeClass="active" to="/EnthalpyWebsite/" spy="true" smooth="true">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/Misson" spy={true} smooth={true}>
-                Mission
-              </Link>
-            </li>
-            <li>
-              <Link to="/Projects" spy={true} smooth={true}>
+              <Link to="/EnthalpyWebsite/Projects" spy="true" smooth="true">
              Projects
               </Link>
             </li>
             <li>
-              <Link to="/Team" spy={true} smooth={true}>
+              <Link to="/EnthalpyWebsite/Team" spy="true" smooth="true">
                 Team
               </Link>
             </li>
             <li>
-              <Link to="/Sponsor" spy={true} smooth={true}>
+              <Link to="/EnthalpyWebsite/Sponsors" spy="true" smooth="true">
                 Support us
               </Link>
             </li>
             <li>
-              <Link to="/Contact" spy={true} smooth={true}>
+              <Link to="/EnthalpyWebsite/Contact" spy="true" smooth="true">
                 Contact
               </Link>
             </li>
