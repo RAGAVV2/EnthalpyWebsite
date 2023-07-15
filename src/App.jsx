@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route }
 import { useContext} from "react";
 import { themeContext } from "./Context";  
 import ContactContent from './components/pages/Contact';
-import SponsorContent from './components/pages/sponsors';
+import SponsorContent from './components/pages/Sponsor';
 import ProjectContent from './components/pages/Projects';
  
 
@@ -28,7 +28,7 @@ function App() {
         <Route path='/EnthalpyWebsite/' element={<HomeContent />}/>
         <Route path='/EnthalpyWebsite/Team' element={<TeamContent />} />
         <Route path='/EnthalpyWebsite/Projects' element={<ProjectContent />} />
-        <Route path='/EnthalpyWebsite/Sponsors' element={<SponsorContent />} />
+        <Route path='/EnthalpyWebsite/Sponsor' element={<SponsorContent />} />
         <Route path='/EnthalpyWebsite/Contact' element={<ContactContent />} />
     </Routes>
    </Router>

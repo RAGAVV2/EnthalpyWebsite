@@ -1,33 +1,8 @@
 import './Style.css'
-import React, { useEffect, useRef, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { gsap } from 'gsap';
+import React from 'react';
 
 const SponsorContent = () => {
-  const containerRef = useRef(null);
-  const [ref1, inView1] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-  const [ref2, inView2] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-  const [showMoreImages, setShowMoreImages] = useState(false);
-
-  useEffect(() => {
-    if (inView1) {
-      gsap.to('.image1', { opacity: 1, x: 0, duration: 1 });
-    }
-    if (inView2) {
-      gsap.to('.image2', { opacity: 1, x: 0, duration: 1 });
-    }
-  }, [inView1, inView2]);
-
-  const handleShowMoreImages = () => {
-    setShowMoreImages(true);
-  };
-
+ 
   return (
     <div className="container">
       <h1>Sponsor</h1>

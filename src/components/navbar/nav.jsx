@@ -33,7 +33,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/EnthalpyWebsite/Sponsors" spy="true" smooth="true">
+              <Link to="/EnthalpyWebsite/Sponsor" spy="true" smooth="true">
                 Support us
               </Link>
             </li>
