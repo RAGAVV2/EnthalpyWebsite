@@ -34,12 +34,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/EnthalpyWebsite/Sponsor" spy="true" smooth="true">
-                Sponsor
+                Support
               </Link>
             </li>
             <li>
               <Link to="/EnthalpyWebsite/Contact" spy="true" smooth="true">
-                Contact us
+                Contact 
               </Link>
             </li>
           </ul>
